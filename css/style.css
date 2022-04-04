@@ -1,0 +1,370 @@
+/*Import goolgle font*/ 
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    color: black;
+}
+
+:root {
+
+}
+
+html {
+
+}
+
+body {
+    font-size: 16px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 17px;
+}
+
+div#container {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr 4fr 3fr 1fr;
+    grid-template-areas:
+    "nav nav"
+    "filter filter"
+    "article1 aside"
+    "article2 article2"
+    "footer footer";
+    height: 100vh;
+    max-width: 1280px;
+    margin: auto;
+} /* exemple de Grid, fr= fraction */
+ 
+/* Header */
+
+header.nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+} /* Configure l'alignement et l'espacement du logo et de la navigation */
+
+div.logo img {
+    width: 55px;
+    margin: 20px;
+    padding-top: 25px;
+}
+
+header.nav nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+a.linkNav {
+    text-decoration: none;
+    border-top: 2px solid #F2F2F2;
+    padding: 45px 30px;
+}
+
+a.linkNav:hover {
+    color: #0065fc;
+    border-top: 2px solid #0065fc;
+}
+
+/* Search */
+
+main.search {
+    grid-area: filter;
+}
+
+div.searchIntro {
+    margin-bottom: 20px;
+}
+
+form.searchForm {
+    display: flex;
+    height: 50px;
+    margin-bottom: 30px;
+} /* définition d'une hauteur + flex qui permet d'aligner les éléments */
+
+label#city {
+    width: 50px;
+    background-color: #F2F2F2;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* permet de centrer l'icon gps */
+    border-radius: 15px 0 0 15px;
+    font-size: 17px;
+} 
+
+input.searchText {
+    width: 230px;
+    font-weight: 700;
+    font-size: 17px;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: #F2F2F2;
+    padding-left: 20px;
+}
+
+input.searchButton {
+    width: 120px;
+    background-color: #0065fc;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+button.mobileButton {
+    display: none; /* n'affiche pas le bouton mobile */
+}
+
+div.searchFilter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+div.searchFilter h3 {
+    margin: 0 30px 10px 5px;
+    padding-top: 10px;
+}
+
+
+div.filter {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button.filterBox {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #e0e0e0;
+    background-color: white;
+    border-radius: 50px;
+    margin-right: 25px;
+    padding: 3px 25px 3px 0;
+    border-left: none;
+    white-space: nowrap; /* Le texte reste sur une ligne */
+    transition: width 500ms ease-in;
+    position: relative;
+}
+
+i.filterIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #deebff;
+    background-color: #deebff;
+    color: #0065fc;
+    font-size: 17px;
+    margin-right: 15px;
+    z-index: 1;
+}
+
+span.textButton {
+    font-weight: 700;
+    font-size: 17px;
+    z-index: 1;
+
+}
+
+span.jaugeBox {
+    background-color: #deebff;
+    border: 2px solid #deebff;
+    border-radius: 80px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    transition: width 300ms ease-in;
+} /* animation pour le hover */ 
+
+button.filterBox:hover .jaugeBox  {
+    width: 102%; 
+}
+
+
+div.searchInfo {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+
+div.infoIcon {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+div.infoIcon i {
+    font-size: 13px;
+    color: #0065fc;
+}
+
+div.searchInfo p {
+    padding-top: 3px;
+}
+
+/* Article hébergements */ 
+
+article.article1 {
+    background-color: #F2F2F2;
+    padding: 20px;
+    grid-area: article1;
+    border-radius: 15px;
+}
+
+.article1 h1 {
+    margin: 15px;
+}
+
+p.more {
+    margin: 20px;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+p.more a {
+    text-decoration: none;
+
+}
+
+
+/* Cartes hébergements */
+
+div.marseille {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 10px;
+}
+
+
+
+div.marseilleCard {
+    width: 250px;
+    background-color: white;;
+    border-radius: 20px;
+    margin: 15px;
+    box-shadow: 0 0 20px #e0e0e0;
+    transition: transform 0.3s;
+}
+
+div.marseilleCard:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 4px 20px gray;
+}
+
+div.marseilleCard a {
+    text-decoration: none;
+}
+
+/* réglagle de la position des images */ 
+
+div.marseilleImg {
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    height: 120px;
+    overflow: hidden;
+    margin: 5px;
+}
+
+div.marseilleImg .imgPosition1 {
+    position: absolute;
+    top:-20%;
+    width: 100%;
+}
+
+div.marseilleImg .imgPosition2 {
+    position: absolute;
+    top: -50%;
+    width: 100%;
+}
+
+div.marseilleImg .imgPosition3 {
+    position: absolute;
+    width: 100%;
+}
+
+div.marseilleImg .imgPosition4 {
+    position: absolute;
+    top:-100%;
+    width: 100%;
+}
+
+/* ajustement des éléments textes de la carte */
+
+div.marseilleBody {
+    margin: 10px;
+    padding-left: 5px;
+}
+
+div.marseilleBody h3 {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+div.marseilleBody p {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 3px;
+}
+
+/* class pour les étoiles */ 
+
+span.etoiles {
+    font-size: 12px;
+}
+
+i.blueStar {
+    color: #0065fc;
+}
+
+i.greyStar {
+    color: #F2F2F2;
+
+
+
+
+
+aside.aside {
+    background-color: darkgreen;
+    grid-area: aside;
+    margin: 15px;
+    border-radius: 15px;
+
+}
+
+article.article2 {
+    background-color: darkkhaki;
+    grid-area: article2;
+    margin: 15px;
+
+}
+
+footer.footer {
+    background-color: darkviolet;
+    grid-area: footer;
+}

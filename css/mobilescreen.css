@@ -1,0 +1,91 @@
+
+
+div#container {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr 4fr 3fr 1fr;
+    grid-template-areas:
+    "nav"
+    "filter"
+    "aside"
+    "article1"
+    "article2"
+    "footer";
+    height: 100vh;
+    max-width: 768px;
+    margin: auto;
+}
+
+/* Header */
+
+header.nav {
+    flex-direction: column;
+    justify-content: center;
+}
+
+header.nav nav {
+    width: 100%;
+}
+
+a.linkNav {
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    border-top: none;
+    border-bottom: 2px solid #f2f2f2;
+}
+
+a.linkNav:hover {
+    border-top:none;
+    border-bottom: 2px solid #0065fc;
+}
+
+/* Search */ 
+
+main.search {
+    grid-area: filter;
+    margin: 20px;
+}
+
+div.searchIntro {
+    margin-bottom: 30px;
+}
+
+form.searchForm {
+
+    justify-content: center; /* centre la barre de recherche */
+}
+
+
+input.searchButton {
+    display: none; /* n'affiche pas le bouton desktop */ 
+}
+
+button.mobileButton {
+    width: 50px;
+    display: block;
+    background-color: #0065fc;
+    border: none;
+    border-radius: 15px;
+    position: relative;
+    right: 10px; /* décalage du bouton mobile pour qu'il chevauche la barre de recherche */
+}
+
+.mobileButton i {
+    color: white;
+    font-size: 15px;
+}
+
+/* Filter */
+
+button.filterBox {
+    margin: 5px;
+    padding: 3px 20px 3px 0px;
+} /* redimmension pour que les éléments s'adapte à la maquette mobile */ 
+
+span.textButton {
+    font-weight: 700;
+    font-size: 15px;
+    z-index: 1;
+
+}
