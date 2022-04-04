@@ -344,18 +344,15 @@ i.blueStar {
 
 i.greyStar {
     color: #F2F2F2;
-
-
-
-
-
-aside.aside {
-    background-color: darkgreen;
-    grid-area: aside;
-    margin: 15px;
-    border-radius: 15px;
-
 }
+
+
+aside.as {
+        background-color: darkgreen;
+        grid-area: aside;
+        margin: 15px;
+        border-radius: 15px;
+    }
 
 article.article2 {
     background-color: darkkhaki;
