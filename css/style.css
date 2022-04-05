@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -23,8 +23,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-    font-size: 22px;
+    font-size: 23px;
     margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 21px;
 }
 
 h3 {
@@ -42,7 +46,7 @@ div#container {
     "article2 article2"
     "footer footer";
     height: 100vh;
-    max-width: 1280px;
+    width: 95%;
     margin: auto;
 } /* exemple de Grid, fr= fraction */
  
@@ -53,12 +57,12 @@ header.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 } /* Configure l'alignement et l'espacement du logo et de la navigation */
 
 div.logo img {
-    width: 55px;
-    margin: 20px;
+    width: 60px;
+    margin: 25px;
     padding-top: 25px;
 }
 
@@ -71,7 +75,7 @@ header.nav nav {
 a.linkNav {
     text-decoration: none;
     border-top: 2px solid #F2F2F2;
-    padding: 45px 30px;
+    padding: 45px 35px;
 }
 
 a.linkNav:hover {
@@ -86,13 +90,13 @@ main.search {
 }
 
 div.searchIntro {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 form.searchForm {
     display: flex;
     height: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 } /* définition d'une hauteur + flex qui permet d'aligner les éléments */
 
 label#city {
@@ -108,7 +112,7 @@ label#city {
 input.searchText {
     width: 230px;
     font-weight: 700;
-    font-size: 17px;
+    font-size: 16px;
     border-width: 1px 0 1px 0;
     border-style: solid;
     border-color: #F2F2F2;
@@ -119,7 +123,7 @@ input.searchButton {
     width: 120px;
     background-color: #0065fc;
     border: none;
-    border-radius: 0 15px 15px 0;
+    border-radius: 0 13px 13px 0;
     color: white;
     font-size: 17px;
     font-weight: 700;
@@ -132,7 +136,7 @@ button.mobileButton {
 div.searchFilter {
     display: flex;
     align-items: center;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     flex-wrap: wrap;
 }
 
@@ -154,8 +158,8 @@ button.filterBox {
     border: 2px solid #e0e0e0;
     background-color: white;
     border-radius: 50px;
-    margin-right: 25px;
-    padding: 3px 25px 3px 0;
+    margin-right: 30px;
+    padding: 3px 20px 3px 0;
     border-left: none;
     white-space: nowrap; /* Le texte reste sur une ligne */
     transition: width 500ms ease-in;
@@ -172,7 +176,7 @@ i.filterIcon {
     border: 2px solid #deebff;
     background-color: #deebff;
     color: #0065fc;
-    font-size: 17px;
+    font-size: 20px;
     margin-right: 15px;
     z-index: 1;
 }
@@ -203,7 +207,7 @@ button.filterBox:hover .jaugeBox  {
 div.searchInfo {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 div.infoIcon {
@@ -215,11 +219,11 @@ div.infoIcon {
     border: 1px solid #e0e0e0;
     border-radius: 50%;
     margin-right: 10px;
-    padding: 10px;
+    padding: 5px;
 }
 
 div.infoIcon i {
-    font-size: 13px;
+    font-size: 12px;
     color: #0065fc;
 }
 
@@ -230,18 +234,25 @@ div.searchInfo p {
 /* Article hébergements */ 
 
 article.article1 {
+
     background-color: #F2F2F2;
     padding: 20px;
     grid-area: article1;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
-.article1 h1 {
+.article1 h2 {
     margin: 15px;
+    padding-top: 15px;
+    padding-left: 5px;
 }
 
 p.more {
-    margin: 20px;
+    margin: 10px;
+    padding-top: 15px;
+    padding-left: 5px;
     font-weight: 700;
     font-size: 17px;
 }
@@ -254,21 +265,20 @@ p.more a {
 
 /* Cartes hébergements */
 
-div.marseille {
+ div.marseille {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 
 
 div.marseilleCard {
-    width: 250px;
-    background-color: white;;
+    background-color: white;
     border-radius: 20px;
     margin: 15px;
-    box-shadow: 0 0 20px #e0e0e0;
+    box-shadow: 0 0 15px #e0e0e0;
     transition: transform 0.3s;
 }
 
@@ -286,7 +296,7 @@ div.marseilleCard a {
 div.marseilleImg {
     border-radius: 15px 15px 0 0;
     position: relative;
-    height: 120px;
+    height: 110px;
     overflow: hidden;
     margin: 5px;
 }
@@ -318,18 +328,19 @@ div.marseilleImg .imgPosition4 {
 
 div.marseilleBody {
     margin: 10px;
-    padding-left: 5px;
+    padding-left: 10px;
 }
 
 div.marseilleBody h3 {
+    white-space: nowrap;
     font-size: 16px;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 div.marseilleBody p {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 300;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 /* class pour les étoiles */ 
@@ -343,16 +354,113 @@ i.blueStar {
 }
 
 i.greyStar {
-    color: #F2F2F2;
+    color: #e0e0e0;
+}
+
+/* Aside Populaires */
+
+
+aside.aside {
+        background-color: #F2F2F2;
+        grid-area: aside;
+        margin-left: 40px;
+        border-radius: 15px;
+        padding: 20px;
+    }
+
+div.asideTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+    padding-top: 15px;
+    padding-left: 5px;
+    
+} 
+
+
+
+i.iconChart {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+/* Cartes populaires */
+
+div.populaire {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+div.populaireCard {
+    background-color: white;
+    border-radius: 20px;
+    margin: 15px;
+    box-shadow: 0 0 20px #e0e0e0;
+    transition: transform 0.3s;
+}
+
+div.populaireCard:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 4px 20px gray;
+}
+
+div.populaireCard a {
+    display: flex;
+    text-decoration: none;
+}
+
+/* réglagle de la position des images */ 
+
+div.populaireImg {
+    position: relative;
+    border-radius: 15px 0 0 15px;
+    margin: 5px;
+    overflow: hidden;
+    width: 130px;
+    height: 130px;
+}
+
+div.populaireImg .imgPosition5 {
+    position: absolute;
+    object-fit: cover;
+    height: 110%;
 }
 
 
-aside.as {
-        background-color: darkgreen;
-        grid-area: aside;
-        margin: 15px;
-        border-radius: 15px;
-    }
+div.populaireImg .imgPosition6 {
+    object-fit: cover;
+    position: absolute;
+    height: 150%;
+    bottom: -28%;  
+}
+
+/*ajustements des cartes populaires */ 
+
+div.populaireBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    padding-left: 5px;
+}
+
+div.populaireBody h3 {
+    white-space: nowrap;
+    font-size: 16px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+div.populaireBody p {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+
 
 article.article2 {
     background-color: darkkhaki;
