@@ -1,0 +1,239 @@
+
+div#container {
+    max-width: 992px;
+    margin: auto;
+}
+
+body {
+    font-size: 13px;
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+/* Header */ 
+
+div.logo img {
+    width: 55px;
+    margin: 20px;
+    padding-top: 20px;
+}
+
+a.linkNav {
+    padding: 40px 25px;
+}
+
+/* Search */
+
+form.searchForm {
+    height: 45px;
+}
+
+label#city {
+    width: 45px;
+    font-size: 16px;
+}
+
+input.searchText {
+    width: 225px;
+    font-size: 16px;
+
+}
+
+input.searchButton {
+    width: 115px;
+    font-size: 16px;
+}
+
+/* Filter */ 
+
+div.searchFilter h3 {
+    margin: 0 20px 10px 5px;
+}
+
+button.filterBox {
+    height: 45px;
+    margin-right: 20px;
+}
+
+i.filterIcon {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+}
+
+span.textButton {
+    font-size: 16px;
+}
+
+span.jaugeBox {
+    width: 45px;
+    height: 45px;
+}
+
+div.infoIcon {
+    width: 20px;
+    height: 20px;
+}
+
+div.infoIcon i {
+    font-size: 10px;
+}
+
+*/ article Hébergements */
+
+article1.article1 {
+    padding: 15px;
+}
+
+article.article1 h2 {
+    margin: 10px;
+    padding-top: 5px;
+}
+
+p.more {
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+/* Marseille card */
+
+div.marseilleCard {
+    width: 180px;
+    margin: 12px;
+}
+
+div.marseilleImg {
+    height: 90px;
+}
+
+div.marseilleImg .imgPosition1 {
+    top: 0%;
+}
+
+img.imgPosition3 {
+    height: 110%;
+}
+
+div.marseilleBody {
+    margin: 7px;
+    padding-left: 7px;
+}
+
+div.marseilleBody h3 {
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+div.marseilleBody p {
+    font-size: 11px;
+    margin-bottom: 3px;
+}
+
+span.etoiles {
+    font-size: 10px;
+}
+
+/* Aside */ 
+
+aside.aside {
+    padding: 15px;
+    margin: 0 10px 40px 10px;
+}
+
+div.asideTitle {
+    margin: 10px;
+    padding-top: 5px;
+}
+
+i.iconChart {
+    font-size: 17px;
+}
+
+/* Populaire cards */ 
+
+article.article1 {
+    margin: 0px 10px 40px 10px;
+}
+
+div.populaireCard {
+    margin: 15px 10px 15px 10px;
+}
+
+div.populaireImg {
+    width: 90px;
+    height: 100px;
+    padding-right: 100px;
+}
+
+div.populaireBody {
+    margin: 5px;
+}
+
+div.bodyText {
+    margin-right: 10px;
+}
+
+div.bodyText h3 {
+    font-size: 13px;
+    margin-bottom: 3px;
+} 
+
+div.bodyText p {
+    font-size: 11px;
+    margin-bottom: 3px;
+}
+
+/* Activités */
+
+article.article2 h2 {
+    margin: 20px;
+}
+
+div.activite1, div.activite2, div.activite3, div.activite4, div.activite5, div.activite6 {
+    margin: 0 15px 0 15px; 
+}
+
+div.activite5 {
+    margin-bottom: 45px;
+}
+
+div.bigTitle, div.mediumTitle, div.smallTitle {
+    padding: 12px 5px 12px 15px;
+}
+
+div.bigTitle h3, div.mediumTitle h3, div.smallTitle h3 {
+    font-size: 13px;
+}
+
+div.activites {
+    grid-template-rows: 175px 175px;
+}
+
+div.activiteBig {
+    height: 350px;
+}
+
+div.activiteMedium {
+    height: 175px;
+}
+
+div.activiteSmall {
+    height: 130px;
+}
+
+/* footer */ 
+
+div.footerList {
+    margin: 20px 20px 40px 20px;
+}

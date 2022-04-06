@@ -22,6 +22,7 @@ div#container {
 header.nav {
     flex-direction: column;
     justify-content: center;
+    margin: 0;
 }
 
 header.nav nav {
@@ -103,8 +104,15 @@ div.asideTitle {
     margin: 20px 5px 10px 5px;   
 }
 
+div.populaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 div.populaireCard {
+    width: 345px;
     margin: 5px;
 }
 
@@ -117,8 +125,10 @@ article.article1 {
     padding: 10px;
 }
 
-article.article1 h1 {
+article.article1 h2 {
     margin: 20px 5px 10px 5px;
+    padding-top: 5px;
+    padding-left: 5px;
 }
 
 div.marseille {
@@ -127,7 +137,47 @@ div.marseille {
 }
 
 div.marseilleCard {
+    width: 345px;
     margin: 5px;
 }
 
-/* Repositionnement des images */
+/* Activité */
+
+div.activites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.activite1, div.activite2, div.activite3, div.activite4, div.activite5, div.activite6 {
+    width: 345px;
+    margin: 5px;
+}
+
+div.activiteBig, div.activiteSmall, div.activiteMedium {
+    height: 200px;
+}
+
+div.bigImg, div.mediumImg, div.smallImg {
+    width: 100%;
+    height: 70%;
+}
+
+div.bigTitle, div.mediumTitle, div.smallTitle {
+    height: 30%;
+    padding: 20px 10px 20px 20px;
+}
+
+div.bigImg img, div.mediumImg img, div.smallImg img {
+    width: 100%;
+}
+
+/* Footer */ 
+
+div.footerList {
+    flex-direction: column;
+}
+
+div.divList {
+    padding-bottom: 20px;
+}

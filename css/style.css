@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    font-size: 15px;
+    font-size: 16px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -46,7 +46,7 @@ div#container {
     "article2 article2"
     "footer footer";
     height: 100vh;
-    width: 95%;
+    max-width: 1440px;
     margin: auto;
 } /* exemple de Grid, fr= fraction */
  
@@ -57,12 +57,12 @@ header.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin: 0 50px 10px 50px;
 } /* Configure l'alignement et l'espacement du logo et de la navigation */
 
 div.logo img {
     width: 60px;
-    margin: 25px;
+    margin: 25px 0 25px 10px;
     padding-top: 25px;
 }
 
@@ -87,6 +87,7 @@ a.linkNav:hover {
 
 main.search {
     grid-area: filter;
+    margin: 0 50px 0 50px;
 }
 
 div.searchIntro {
@@ -96,7 +97,7 @@ div.searchIntro {
 form.searchForm {
     display: flex;
     height: 50px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 } /* définition d'une hauteur + flex qui permet d'aligner les éléments */
 
 label#city {
@@ -110,9 +111,9 @@ label#city {
 } 
 
 input.searchText {
-    width: 230px;
+    width: 240px;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 17px;
     border-width: 1px 0 1px 0;
     border-style: solid;
     border-color: #F2F2F2;
@@ -120,7 +121,7 @@ input.searchText {
 }
 
 input.searchButton {
-    width: 120px;
+    width: 130px;
     background-color: #0065fc;
     border: none;
     border-radius: 0 13px 13px 0;
@@ -219,7 +220,7 @@ div.infoIcon {
     border: 1px solid #e0e0e0;
     border-radius: 50%;
     margin-right: 10px;
-    padding: 5px;
+    padding: 10px;
 }
 
 div.infoIcon i {
@@ -241,18 +242,19 @@ article.article1 {
     border-radius: 15px;
     display: flex;
     flex-direction: column;
+    margin: 0 20px 40px 50px;
 }
 
 .article1 h2 {
     margin: 15px;
     padding-top: 15px;
-    padding-left: 5px;
+    padding-left: 15px;
 }
 
 p.more {
     margin: 10px;
     padding-top: 15px;
-    padding-left: 5px;
+    padding-left: 15px;
     font-weight: 700;
     font-size: 17px;
 }
@@ -270,11 +272,13 @@ p.more a {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin-bottom: 5px;
+    align-self: center;
 }
 
 
 
 div.marseilleCard {
+    width: 250px;
     background-color: white;
     border-radius: 20px;
     margin: 15px;
@@ -320,7 +324,7 @@ div.marseilleImg .imgPosition3 {
 
 div.marseilleImg .imgPosition4 {
     position: absolute;
-    top:-100%;
+    bottom: -100%;
     width: 100%;
 }
 
@@ -363,12 +367,13 @@ i.greyStar {
 aside.aside {
         background-color: #F2F2F2;
         grid-area: aside;
-        margin-left: 40px;
+        margin: 0 50px 40px 20px;
         border-radius: 15px;
         padding: 20px;
     }
 
 div.asideTitle {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -377,7 +382,6 @@ div.asideTitle {
     padding-left: 5px;
     
 } 
-
 
 
 i.iconChart {
@@ -419,8 +423,8 @@ div.populaireImg {
     border-radius: 15px 0 0 15px;
     margin: 5px;
     overflow: hidden;
-    width: 130px;
-    height: 130px;
+    width: 125px;
+    height: 135px;
 }
 
 div.populaireImg .imgPosition5 {
@@ -447,14 +451,14 @@ div.populaireBody {
     padding-left: 5px;
 }
 
-div.populaireBody h3 {
+div.bodyText h3 {
     white-space: nowrap;
     font-size: 16px;
     padding-top: 5px;
     margin-bottom: 10px;
 }
 
-div.populaireBody p {
+div.bodyText p {
     font-size: 14px;
     font-weight: 300;
     margin-bottom: 5px;
@@ -463,13 +467,634 @@ div.populaireBody p {
 
 
 article.article2 {
-    background-color: darkkhaki;
     grid-area: article2;
-    margin: 15px;
-
+    margin-bottom: 40px;
 }
 
+article.article2 h2 {
+    margin: 20px 20px 20px 50px;
+    padding-top: 15px;
+    padding-left: 5px;
+}
+
+/* positionnement de la grid et définition de l'espacement des cards */
+
+div.activites {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 225px 225px;
+    grid-template-areas:
+    "activite1 activite2 activite4 activite5"
+    "activite1 activite3 activite4 activite6";
+    align-items: flex-end;
+}
+
+div.activite1 {
+    grid-area: activite1;
+    margin: 0 20px 0 50px;
+}
+
+div.activite2 {
+    grid-area: activite2;
+    margin: 0 20px 0 20px;
+}
+
+div.activite3 {
+    grid-area: activite3;
+    margin: 0 20px 0 20px;
+}
+
+div.activite4 {
+    grid-area: activite4;
+    margin: 0 20px 0 20px;
+}
+
+div.activite5 {
+    grid-area: activite5;
+    margin: 0 50px 45px 20px;
+}
+
+div.activite6 {
+    grid-area: activite6;
+    margin: 0 50px 0 20px;
+}
+
+/* Grandes activités */
+
+div.activiteBig {
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #e0e0e0;
+    transition: transform 0.3s;
+}
+
+div.activiteBig:hover{
+    transform: scale(1.05);
+    box-shadow: 3px 4px 20px gray;
+}
+
+div.activiteBig a {
+    text-decoration: none;
+}
+
+div.bigImg {
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    overflow: hidden;
+    height: 89%;
+}
+
+div.bigImg img {
+    object-fit: cover;
+    position: absolute;
+    height: 100%;
+}
+
+div.bigTitle {
+    height: 11%;
+    border-radius: 0 0 20px 20px;
+    background-color: white;
+    padding: 15px 10px 10px 20px;
+}
+
+/* Moyennes activités */ 
+
+div.activiteMedium {
+    height: 225px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #e0e0e0;
+    transition: transform 0.3s;
+}
+
+div.activiteMedium:hover{
+    transform: scale(1.05);
+    box-shadow: 3px 4px 20px gray;
+}
+
+div.activiteMedium a {
+    text-decoration: none;
+}
+
+div.mediumImg {
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    overflow: hidden;
+    height: 78%;
+}
+
+div.mediumImg img {
+    object-fit: cover;
+    position: absolute;
+    width: 200%;
+    height: 100%;
+}
+
+div.mediumTitle {
+    height: 22%;
+    border-radius: 0 0 20px 20px;
+    background-color: white;
+    padding: 15px 10px 10px 20px;
+}
+
+/* Petites activités */ 
+
+div.activiteSmall {
+    height: 180px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #e0e0e0;
+    transition: transform 0.3s;
+}
+
+div.activiteSmall:hover{
+    transform: scale(1.05);
+    box-shadow: 3px 4px 20px gray;
+}
+
+div.activiteSmall a {
+    text-decoration: none;
+}
+
+div.smallImg {
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    overflow: hidden;
+    height: 70%;
+}
+
+div.smallImg img {
+    object-fit: cover;
+    position: absolute;
+    height: 170%;
+}
+
+div.smallTitle {
+    height: 30%;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+    padding: 15px 10px 10px 20px;
+}
+
+/* footer */ 
+
 footer.footer {
-    background-color: darkviolet;
     grid-area: footer;
+    background-color: #F2F2F2;
+}
+
+div.footerList {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px 40px 50px;
+}
+div.footerList h3 {
+    padding: 20px 0 20px 0;
+}
+
+
+div.footerList ul {
+    list-style-type: none;
+}
+
+li.listLink {
+    padding-bottom: 10px;
+}
+
+li.listLink a {
+    text-decoration: none;
+}
+
+/* Media queries */ 
+
+@media screen and (max-width:1200px) and (min-width:992px) {
+
+    div#container {
+        max-width: 992px;
+        margin: auto;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    h3 {
+        font-size: 16px;
+    }
+    
+    /* Header */ 
+    
+    div.logo img {
+        width: 55px;
+        margin: 20px;
+        padding-top: 20px;
+    }
+    
+    a.linkNav {
+        padding: 40px 25px;
+    }
+    
+    /* Search */
+    
+    form.searchForm {
+        height: 45px;
+    }
+    
+    label#city {
+        width: 45px;
+        font-size: 16px;
+    }
+    
+    input.searchText {
+        width: 220px;
+        font-size: 16px;
+    
+    }
+    
+    input.searchButton {
+        width: 120px;
+        font-size: 16px;
+    }
+    
+    /* Filter */ 
+    
+    div.searchFilter h3 {
+        margin: 0 20px 10px 5px;
+    }
+    
+    button.filterBox {
+        height: 45px;
+        margin-right: 20px;
+    }
+    
+    i.filterIcon {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+    
+    span.textButton {
+        font-size: 16px;
+    }
+    
+    span.jaugeBox {
+        width: 45px;
+        height: 45px;
+    }
+    
+    div.infoIcon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    div.infoIcon i {
+        font-size: 10px;
+    }
+    
+    */ article Hébergements */
+    
+    article1.article1 {
+        padding: 15px;
+    }
+    
+    article.article1 h2 {
+        margin: 10px;
+        padding-top: 5px;
+    }
+    
+    p.more {
+        padding-top: 5px;
+        font-size: 16px;
+    }
+    
+    /* Marseille card */
+    
+    div.marseilleCard {
+        width: 180px;
+        margin: 12px;
+    }
+    
+    div.marseilleImg {
+        height: 90px;
+    }
+    
+    div.marseilleImg .imgPosition1 {
+        top: 0%;
+    }
+    
+    img.imgPosition3 {
+        height: 110%;
+    }
+    
+    div.marseilleBody {
+        margin: 7px;
+        padding-left: 7px;
+    }
+    
+    div.marseilleBody h3 {
+        font-size: 13px;
+        margin-bottom: 3px;
+    }
+    
+    div.marseilleBody p {
+        font-size: 11px;
+        margin-bottom: 3px;
+    }
+    
+    span.etoiles {
+        font-size: 10px;
+    }
+    
+    /* Aside */ 
+    
+    aside.aside {
+        padding: 15px;
+        margin: 0 10px 40px 10px;
+    }
+    
+    div.asideTitle {
+        margin: 10px;
+        padding-top: 5px;
+    }
+    
+    i.iconChart {
+        font-size: 17px;
+    }
+    
+    /* Populaire cards */ 
+    
+    article.article1 {
+        margin: 0px 10px 40px 10px;
+    }
+    
+    div.populaireCard {
+        margin: 15px 10px 15px 10px;
+    }
+    
+    div.populaireImg {
+        width: 90px;
+        height: 100px;
+        padding-right: 100px;
+    }
+    
+    div.populaireBody {
+        margin: 5px;
+    }
+    
+    div.bodyText {
+        margin-right: 10px;
+    }
+    
+    div.bodyText h3 {
+        font-size: 13px;
+        margin-bottom: 3px;
+    } 
+    
+    div.bodyText p {
+        font-size: 11px;
+        margin-bottom: 3px;
+    }
+    
+    /* Activités */
+    
+    article.article2 h2 {
+        margin: 20px;
+    }
+    
+    div.activite1, div.activite2, div.activite3, div.activite4, div.activite5, div.activite6 {
+        margin: 0 15px 0 15px; 
+    }
+    
+    div.activite5 {
+        margin-bottom: 45px;
+    }
+    
+    div.bigTitle, div.mediumTitle, div.smallTitle {
+        padding: 12px 5px 12px 15px;
+    }
+    
+    div.bigTitle h3, div.mediumTitle h3, div.smallTitle h3 {
+        font-size: 13px;
+    }
+    
+    div.activites {
+        grid-template-rows: 175px 175px;
+    }
+    
+    div.activiteBig {
+        height: 350px;
+    }
+    
+    div.activiteMedium {
+        height: 175px;
+    }
+    
+    div.activiteSmall {
+        height: 130px;
+    }
+    
+    /* footer */ 
+    
+    div.footerList {
+        margin: 20px 20px 40px 20px;
+    }
+    
+}
+
+@media screen and (max-width:768px) {
+
+    div#container {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 2fr 4fr 3fr 1fr;
+        grid-template-areas:
+        "nav"
+        "filter"
+        "aside"
+        "article1"
+        "article2"
+        "footer";
+        height: 100vh;
+        width: 100%;
+        max-width: 375px;
+        margin: auto;
+    }
+    
+    /* Header */
+    
+    header.nav {
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    header.nav nav {
+        width: 100%;
+    }
+
+    div.logo img {
+        margin: 25px 0 25px 0;
+    }
+    
+    a.linkNav {
+        width: 50%;
+        padding: 10px;
+        text-align: center;
+        border-top: none;
+        border-bottom: 2px solid #f2f2f2;
+    }
+    
+    a.linkNav:hover {
+        border-top:none;
+        border-bottom: 2px solid #0065fc;
+    }
+    
+    /* Search */ 
+    
+    main.search {
+        grid-area: filter;
+        margin: 20px;
+    }
+    
+    div.searchIntro {
+        margin-bottom: 30px;
+    }
+    
+    form.searchForm {
+        margin-left: 8px;
+        justify-content: center; /* centre la barre de recherche */
+    }
+    
+    
+    input.searchButton {
+        display: none; /* n'affiche pas le bouton desktop */ 
+    }
+    
+    button.mobileButton {
+        width: 50px;
+        display: block;
+        background-color: #0065fc;
+        border: none;
+        border-radius: 15px;
+        position: relative;
+        right: 10px; /* décalage du bouton mobile pour qu'il chevauche la barre de recherche */
+    }
+    
+    .mobileButton i {
+        color: white;
+        font-size: 15px;
+    }
+    
+    /* Filter */
+    
+    button.filterBox {
+        margin: 5px;
+        padding: 3px 15px 3px 0px;
+    } /* redimmension pour que les éléments s'adapte à la maquette mobile */ 
+    
+    span.textButton {
+        font-weight: 700;
+        font-size: 15px;
+        z-index: 1;
+    
+    }
+    
+    /* Aside */ 
+    
+    aside.aside {
+        margin: 0;
+        border-radius: 0;
+        padding: 10px 10px 30px 10px;
+    }
+    
+    div.asideTitle {
+        margin: 20px 5px 10px 5px;   
+    }
+    
+    div.populaire {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    
+    div.populaireCard {
+        width: 345px;
+        margin: 5px;
+    }
+    
+    /* Article 1 */
+    
+    article.article1 {
+        background-color: white;
+        margin: 0;
+        border-radius: 0;
+        padding: 10px;
+    }
+    
+    article.article1 h2 {
+        margin: 20px 5px 10px 5px;
+        padding-top: 5px;
+        padding-left: 5px;
+    }
+    
+    div.marseille {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    div.marseilleCard {
+        width: 345px;
+        margin: 5px;
+    }
+    
+    /* Activité */
+    
+    div.activites {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    div.activite1, div.activite2, div.activite3, div.activite4, div.activite5, div.activite6 {
+        width: 345px;
+        margin: 5px;
+    }
+    
+    div.activiteBig, div.activiteSmall, div.activiteMedium {
+        height: 200px;
+    }
+    
+    div.bigImg, div.mediumImg, div.smallImg {
+        width: 100%;
+        height: 70%;
+    }
+    
+    div.bigTitle, div.mediumTitle, div.smallTitle {
+        height: 30%;
+        padding: 20px 10px 20px 20px;
+    }
+    
+    div.bigImg img, div.mediumImg img, div.smallImg img {
+        width: 100%;
+    }
+    
+    /* Footer */ 
+    
+    div.footerList {
+        flex-direction: column;
+    }
+    
+    div.divList {
+        padding-bottom: 20px;
+    }
+    
 }
