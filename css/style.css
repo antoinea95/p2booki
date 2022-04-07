@@ -190,6 +190,8 @@ span.textButton {
 
 }
 
+/* effet survol filtres */ 
+
 span.jaugeBox {
     background-color: #deebff;
     border: 2px solid #deebff;
@@ -199,7 +201,7 @@ span.jaugeBox {
     position: absolute;
     left: 0;
     transition: width 300ms ease-in;
-} /* animation pour le hover */ 
+} 
 
 button.filterBox:hover .jaugeBox  {
     width: 102%; 
@@ -442,7 +444,7 @@ div.populaireImg .imgPosition6 {
     bottom: -28%;  
 }
 
-/*ajustements du texte des cartes populaires */ 
+/*ajustements du texte des cartes populaires  */ 
 
 div.populaireBody {
     display: flex;
