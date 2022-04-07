@@ -53,11 +53,12 @@ div#container {
 /* Header */
 
 header.nav {
+    background-color: white;
     grid-area: nav;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 50px 10px 50px;
+    margin: 0 50px 40px 50px;
 } /* Configure l'alignement et l'espacement du logo et de la navigation */
 
 div.logo img {
@@ -87,7 +88,7 @@ a.linkNav:hover {
 
 main.search {
     grid-area: filter;
-    margin: 0 50px 0 50px;
+    margin: 0 50px 40px 50px;
 }
 
 div.searchIntro {
@@ -208,7 +209,6 @@ button.filterBox:hover .jaugeBox  {
 div.searchInfo {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 30px;
 }
 
 div.infoIcon {
@@ -379,7 +379,6 @@ div.asideTitle {
     align-items: center;
     margin: 15px;
     padding-top: 15px;
-    padding-left: 5px;
     
 } 
 
@@ -387,7 +386,6 @@ div.asideTitle {
 i.iconChart {
     font-size: 20px;
     font-weight: 900;
-    margin-bottom: 5px;
 }
 
 /* Cartes populaires */
@@ -472,7 +470,7 @@ article.article2 {
 }
 
 article.article2 h2 {
-    margin: 20px 20px 20px 50px;
+    margin: 20px 20px 30px 50px;
     padding-top: 15px;
     padding-left: 5px;
 }
@@ -668,7 +666,7 @@ li.listLink a {
 
 @media screen and (max-width:1200px) and (min-width:992px) {
 
-    div#container {
+    div#container  {
         max-width: 992px;
         margin: auto;
     }
@@ -691,6 +689,10 @@ li.listLink a {
     }
     
     /* Header */ 
+
+    header.nav {
+        margin: 0 15px 30px 15px;
+    }
     
     div.logo img {
         width: 55px;
@@ -725,6 +727,10 @@ li.listLink a {
     }
     
     /* Filter */ 
+
+    main.search {
+        margin: 0 15px 30px 15px;
+    }
     
     div.searchFilter h3 {
         margin: 0 20px 10px 5px;
@@ -759,12 +765,14 @@ li.listLink a {
         font-size: 10px;
     }
     
-    */ article Hébergements */
-    
-    article1.article1 {
+    /* article Hébergements */
+
+    article.article1 {
         padding: 15px;
+        margin: 0 10px 30px 15px;
     }
     
+
     article.article1 h2 {
         margin: 10px;
         padding-top: 5px;
@@ -817,7 +825,7 @@ li.listLink a {
     
     aside.aside {
         padding: 15px;
-        margin: 0 10px 40px 10px;
+        margin: 0 15px 30px 10px;
     }
     
     div.asideTitle {
@@ -831,9 +839,6 @@ li.listLink a {
     
     /* Populaire cards */ 
     
-    article.article1 {
-        margin: 0px 10px 40px 10px;
-    }
     
     div.populaireCard {
         margin: 15px 10px 15px 10px;
@@ -864,6 +869,10 @@ li.listLink a {
     }
     
     /* Activités */
+
+    article.article2 {
+        margin-bottom: 30px;
+    }
     
     article.article2 h2 {
         margin: 20px;
@@ -904,17 +913,16 @@ li.listLink a {
     /* footer */ 
     
     div.footerList {
-        margin: 20px 20px 40px 20px;
+        margin: 20px 20px 30px 20px;
     }
     
 }
 
-@media screen and (max-width:768px) {
-
+@media screen and (max-width:991px) and (min-width:768px) {
     div#container {
         display:grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2fr 2fr 4fr 3fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
         "nav"
         "filter"
@@ -923,7 +931,262 @@ li.listLink a {
         "article2"
         "footer";
         height: 100vh;
-        width: 100%;
+        max-width: 768px;
+        margin: auto;
+}
+
+/* Header */
+    
+header.nav {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+header.nav nav {
+    width: 100%;
+}
+
+div.logo img {
+    margin: 25px 0 25px 0;
+}
+
+a.linkNav {
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    border-top: none;
+    border-bottom: 2px solid #f2f2f2;
+}
+
+a.linkNav:hover {
+    border-top:none;
+    border-bottom: 2px solid #0065fc;
+}
+
+/* Search */ 
+    
+main.search {
+    grid-area: filter;
+    margin: 0 10px 20px 10px; 
+}
+
+div.searchIntro {
+    margin-bottom: 30px;
+}
+
+form.searchForm {
+    margin-left: 8px;
+    justify-content: center; /* centre la barre de recherche */
+}
+
+
+input.searchButton {
+    display: none; /* n'affiche pas le bouton desktop */ 
+}
+
+button.mobileButton {
+    width: 50px;
+    display: block;
+    background-color: #0065fc;
+    border: none;
+    border-radius: 15px;
+    position: relative;
+    right: 10px; /* décalage du bouton mobile pour qu'il chevauche la barre de recherche */
+}
+
+.mobileButton i {
+    color: white;
+    font-size: 15px;
+}
+
+/* Filter */
+
+button.filterBox {
+    margin: 5px;
+    padding: 3px 15px 3px 0px;
+} /* redimmension pour que les éléments s'adapte à la maquette mobile */ 
+
+span.textButton {
+    font-weight: 700;
+    font-size: 15px;
+    z-index: 1;
+
+}
+
+/* Aside */ 
+    
+aside.aside {
+    background-color: white;
+    margin: 0 0 20px 0;
+    padding: 5px 5px 15px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+div.asideTitle {
+    margin: 10px 10px 15px 10px;
+}
+
+div.populaire {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+div.populaireCard {
+    width: 240px;
+    margin: 5px;
+}
+
+div.populaireImg {
+    width: 80px;
+    padding-right: 80px;
+    height: 110px;
+}
+
+div.populaireBody {
+    margin: 10px 10px 10px 5px;
+    padding-left: 0;
+}
+
+div.populaireBody h3 {
+    font-size: 15px;
+}
+
+div.populaireBody p {
+    font-size: 14px;
+}
+
+/* Article 1 */
+    
+article.article1 {
+    background-color: white;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 5px 5px 15px 5px;
+}
+
+article.article1 h2 {
+    margin: 10px 5px 15px 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+
+div.marseilleCard {
+    width: 240px;
+    margin: 5px;
+}
+
+div.marseilleBody h3 {
+    font-size: 15px;
+}
+
+div.marseilleBody p {
+    font-size: 14px;
+}
+
+/* Activités */ 
+
+article.article2 {
+    margin-bottom: 20px;
+}
+
+article.article2 h2 {
+    margin: 15px 10px 15px 10px;
+}
+
+
+div.activites {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "activite1 activite2"
+    "activite1 activite3"
+    "activite4 activite5"
+    "activite4 activite6";
+}
+
+div.activiteBig {
+    height: 350px;
+}
+
+div.activiteMedium {
+    height: 175px;
+}
+
+div.activiteSmall {
+    height: 130px;
+}
+
+div.activite1, div.activite2, div.activite3, div.activite4, div.activite5, div.activite6 {
+    margin: 0 10px 0 10px; 
+}
+
+div.activite1, div.activite3, div.activite4, div.activite5, div.activite6 {
+    margin-bottom: 20px;
+}
+
+
+div.activite5 {
+    margin-bottom: 45px;
+}
+
+div.bigImg {
+    height: 85%;
+}
+
+div.bigTitle {
+    height: 15%;
+}
+
+div.mediumImg {
+    height: 72%;
+}
+
+div.mediumTitle {
+    height: 28%;
+}
+
+div.smallImg {
+    height: 62%;
+}
+
+div.smallImg img {
+    width: 100%;
+}
+
+div.smallTitle {
+    height: 38%;
+}
+
+/* Footer */ 
+
+div.footerList {
+    width: 85%;
+    margin: 20px 20px 20px 10px;
+}
+    
+}
+
+@media screen and (max-width:767px) {
+
+    div#container {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "nav"
+        "filter"
+        "aside"
+        "article1"
+        "article2"
+        "footer";
+        height: 100vh;
         max-width: 375px;
         margin: auto;
     }
@@ -933,7 +1196,7 @@ li.listLink a {
     header.nav {
         flex-direction: column;
         justify-content: center;
-        margin: 0;
+        margin: 0 0 20px 0;
     }
     
     header.nav nav {
@@ -961,7 +1224,7 @@ li.listLink a {
     
     main.search {
         grid-area: filter;
-        margin: 20px;
+        margin: 0 10px 20px 10px; 
     }
     
     div.searchIntro {
@@ -1010,14 +1273,18 @@ li.listLink a {
     /* Aside */ 
     
     aside.aside {
-        margin: 0;
+        margin: 0 0 20px 0;
         border-radius: 0;
-        padding: 10px 10px 30px 10px;
+        padding: 10px 5px 25px 5px;
+        background-size: 100%;
     }
     
     div.asideTitle {
-        margin: 20px 5px 10px 5px;   
+        align-items: center;
+        margin: 20px 10px 10px 10px;   
     }
+
+    
     
     div.populaire {
         display: flex;
@@ -1027,7 +1294,7 @@ li.listLink a {
     
     
     div.populaireCard {
-        width: 345px;
+        width: 345px; 
         margin: 5px;
     }
     
@@ -1035,13 +1302,13 @@ li.listLink a {
     
     article.article1 {
         background-color: white;
-        margin: 0;
+        margin: 0 0 20px 0;
         border-radius: 0;
-        padding: 10px;
+        padding: 10px 5px 0 5px;
     }
     
     article.article1 h2 {
-        margin: 20px 5px 10px 5px;
+        margin: 10px 5px 10px 5px;
         padding-top: 5px;
         padding-left: 5px;
     }
@@ -1049,6 +1316,7 @@ li.listLink a {
     div.marseille {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
     
     div.marseilleCard {
@@ -1057,6 +1325,15 @@ li.listLink a {
     }
     
     /* Activité */
+
+    article.article2 {
+        margin: 0 0 20px 0;
+        padding: 10px 5px 0 5px;
+    }
+
+    article.article2 h2 {
+        margin: 0 10px 10px 10px;
+    }
     
     div.activites {
         display: flex;
@@ -1091,6 +1368,7 @@ li.listLink a {
     
     div.footerList {
         flex-direction: column;
+        margin: 20px 10px 20px 15px;
     }
     
     div.divList {
