@@ -375,7 +375,7 @@ aside.aside {
 div.asideTitle {
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* espace le titre et l'icone */ 
     align-items: center;
     margin: 15px;
     padding-top: 15px;
@@ -406,8 +406,8 @@ div.populaireCard {
 
 div.populaireCard:hover {
     transform: scale(1.05);
-    box-shadow: 3px 4px 20px gray;
-}
+    box-shadow: 3px 4px 20px gray; 
+} /* animation "zoom" au survol */ 
 
 div.populaireCard a {
     display: flex;
@@ -421,9 +421,12 @@ div.populaireImg {
     border-radius: 15px 0 0 15px;
     margin: 5px;
     overflow: hidden;
+    padding-right: 125px;
     width: 125px;
-    height: 135px;
+    height: 135px; /* taille du conteneur de l'image */ 
 }
+
+/* ajustement des images */ 
 
 div.populaireImg .imgPosition5 {
     position: absolute;
@@ -439,7 +442,7 @@ div.populaireImg .imgPosition6 {
     bottom: -28%;  
 }
 
-/*ajustements des cartes populaires */ 
+/*ajustements du texte des cartes populaires */ 
 
 div.populaireBody {
     display: flex;
@@ -671,6 +674,7 @@ li.listLink a {
         margin: auto;
     }
     
+    /* reduction de la taille des polices */ 
     body {
         font-size: 14px;
     }
@@ -896,7 +900,7 @@ li.listLink a {
     
     div.activites {
         grid-template-rows: 175px 175px;
-    }
+    }  /* ajustement de la hauteur de ligne pour gérer l'alignement des petites et moyennes cartes */
     
     div.activiteBig {
         height: 350px;
@@ -933,7 +937,7 @@ li.listLink a {
         height: 100vh;
         max-width: 768px;
         margin: auto;
-}
+} /* modification de la grid pour passer à une seule colonne */
 
 /* Header */
     
@@ -942,7 +946,7 @@ header.nav {
     justify-content: center;
     margin: 0;
     margin-bottom: 20px;
-}
+}  /* utilisation du header de la maquette mobile */ 
 
 header.nav nav {
     width: 100%;
@@ -1006,7 +1010,7 @@ button.mobileButton {
 button.filterBox {
     margin: 5px;
     padding: 3px 15px 3px 0px;
-} /* redimmension pour que les éléments s'adapte à la maquette mobile */ 
+} /* redimmension pour que les éléments s'adapte */ 
 
 span.textButton {
     font-weight: 700;
@@ -1024,7 +1028,8 @@ aside.aside {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-}
+} /* disposition des cards en ligne pour profiter de la largeur d'une tablette par rapport a la maquette
+mobile */ 
 
 div.asideTitle {
     margin: 10px 10px 15px 10px;
@@ -1034,19 +1039,20 @@ div.populaire {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
+}  
 
 
 div.populaireCard {
     width: 240px;
     margin: 5px;
-}
+} /* définition d'une largeur pour que les cards soient identiques */ 
 
 div.populaireImg {
     width: 80px;
     padding-right: 80px;
     height: 110px;
-}
+} /* ajustement de la taille des images, le padding permet de bloquer la largeur comme que l'image est 
+en position absolute */ 
 
 div.populaireBody {
     margin: 10px 10px 10px 5px;
@@ -1109,7 +1115,9 @@ div.activites {
     "activite1 activite3"
     "activite4 activite5"
     "activite4 activite6";
-}
+} /* Redimension de la grid pour s'adapter au format */ 
+
+/* définition des hauteurs des différentes cards */
 
 div.activiteBig {
     height: 350px;
@@ -1136,6 +1144,7 @@ div.activite5 {
     margin-bottom: 45px;
 }
 
+/* ajustement proportionnel de la bande blanche sur les cards */ 
 div.bigImg {
     height: 85%;
 }
@@ -1189,7 +1198,7 @@ div.footerList {
         height: 100vh;
         max-width: 375px;
         margin: auto;
-    }
+    } /* grid sur une seule colonne */ 
     
     /* Header */
     
@@ -1201,14 +1210,14 @@ div.footerList {
     
     header.nav nav {
         width: 100%;
-    }
+    } /* permet à la bordure des liens d'occuper toute la largeur */
 
     div.logo img {
         margin: 25px 0 25px 0;
     }
     
     a.linkNav {
-        width: 50%;
+        width: 50%; /* permet au soulignement bleu au hover d'être bien réparti */ 
         padding: 10px;
         text-align: center;
         border-top: none;
@@ -1296,7 +1305,8 @@ div.footerList {
     div.populaireCard {
         width: 345px; 
         margin: 5px;
-    }
+    } /* définition d'une largeur de card pour que tout l'espace soit occupé et que les cards de chaque 
+    catégorie soient identiques */ 
     
     /* Article 1 */
     
@@ -1339,7 +1349,7 @@ div.footerList {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+    } /* passage en flex pour que les card s'ajustent en colonnes */ 
     
     div.activite1, div.activite2, div.activite3, div.activite4, div.activite5, div.activite6 {
         width: 345px;
