@@ -1,4 +1,3 @@
-/*Import goolgle font*/ 
 * {
     box-sizing: border-box;
     font-family: 'Raleway';
@@ -14,7 +13,7 @@ html {
 }
 
 body {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -214,8 +213,8 @@ div.searchInfo {
 }
 
 div.infoIcon {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,7 +225,7 @@ div.infoIcon {
 }
 
 div.infoIcon i {
-    font-size: 12px;
+    font-size: 11px;
     color: #0065fc;
 }
 
@@ -250,7 +249,7 @@ article.article1 {
 .article1 h2 {
     margin: 15px;
     padding-top: 15px;
-    padding-left: 15px;
+    padding-left: 5px;
 }
 
 p.more {
@@ -339,12 +338,12 @@ div.marseilleBody {
 
 div.marseilleBody h3 {
     white-space: nowrap;
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 5px;
 }
 
 div.marseilleBody p {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
     margin-bottom: 5px;
 }
@@ -386,7 +385,7 @@ div.asideTitle {
 
 
 i.iconChart {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 900;
 }
 
@@ -456,13 +455,13 @@ div.populaireBody {
 
 div.bodyText h3 {
     white-space: nowrap;
-    font-size: 16px;
+    font-size: 17px;
     padding-top: 5px;
     margin-bottom: 10px;
 }
 
 div.bodyText p {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
     margin-bottom: 5px;
 }
@@ -682,7 +681,7 @@ li.listLink a {
     }
     
     h1 {
-        font-size: 20px;
+        font-size: 23px;
         margin-bottom: 5px;
     }
     
@@ -691,7 +690,7 @@ li.listLink a {
     }
     
     h3 {
-        font-size: 16px;
+        font-size: 15px;
     }
     
     /* Header */ 
@@ -718,18 +717,17 @@ li.listLink a {
     
     label#city {
         width: 45px;
-        font-size: 16px;
+        font-size: 15px;
     }
     
     input.searchText {
         width: 220px;
-        font-size: 16px;
-    
+        font-size: 15px;
     }
     
     input.searchButton {
+        font-size: 15px;
         width: 120px;
-        font-size: 16px;
     }
     
     /* Filter */ 
@@ -746,16 +744,17 @@ li.listLink a {
         height: 45px;
         margin-right: 20px;
     }
+
+    span.textButton {
+        font-size: 15px;
+    }
     
     i.filterIcon {
         width: 45px;
         height: 45px;
-        font-size: 18px;
-    }
-    
-    span.textButton {
         font-size: 16px;
     }
+
     
     span.jaugeBox {
         width: 45px;
@@ -925,6 +924,19 @@ li.listLink a {
 }
 
 @media screen and (max-width:991px) and (min-width:768px) {
+
+    body { 
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
     div#container {
         display:grid;
         grid-template-columns: 1fr;
@@ -987,6 +999,10 @@ form.searchForm {
     justify-content: center; /* centre la barre de recherche */
 }
 
+input.searchText {
+    font-size: 15px;
+}
+
 
 input.searchButton {
     display: none; /* n'affiche pas le bouton desktop */ 
@@ -1009,14 +1025,18 @@ button.mobileButton {
 
 /* Filter */
 
+div.searchFilter h3 {
+    font-size: 15px;
+}
+
 button.filterBox {
     margin: 5px;
     padding: 3px 15px 3px 0px;
 } /* redimmension pour que les éléments s'adapte */ 
 
 span.textButton {
-    font-weight: 700;
     font-size: 15px;
+    font-weight: 700;
     z-index: 1;
 
 }
@@ -1034,7 +1054,7 @@ aside.aside {
 mobile */ 
 
 div.asideTitle {
-    margin: 10px 10px 15px 10px;
+    margin: 10px 10px 15px 15px;
 }
 
 div.populaire {
@@ -1045,8 +1065,8 @@ div.populaire {
 
 
 div.populaireCard {
-    width: 240px;
-    margin: 5px;
+    width: 230px;
+    margin: 10px;
 } /* définition d'une largeur pour que les cards soient identiques */ 
 
 div.populaireImg {
@@ -1062,11 +1082,11 @@ div.populaireBody {
 }
 
 div.populaireBody h3 {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 div.populaireBody p {
-    font-size: 14px;
+    font-size: 11px;
 }
 
 /* Article 1 */
@@ -1079,23 +1099,27 @@ article.article1 {
 }
 
 article.article1 h2 {
-    margin: 10px 5px 15px 5px;
+    margin: 10px 5px 15px 10px;
     padding-top: 5px;
+    padding-left: 5px;
+}
+
+p.more {
     padding-left: 5px;
 }
 
 
 div.marseilleCard {
-    width: 240px;
-    margin: 5px;
+    width: 230px;
+    margin: 10px;
 }
 
 div.marseilleBody h3 {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 div.marseilleBody p {
-    font-size: 14px;
+    font-size: 11px;
 }
 
 /* Activités */ 
@@ -1147,6 +1171,11 @@ div.activite5 {
 }
 
 /* ajustement proportionnel de la bande blanche sur les cards */ 
+
+div.bigTitle h3, div.mediumTitle h3, div.smallTitle h3 {
+    font-size: 13px;
+}
+
 div.bigImg {
     height: 85%;
 }
@@ -1185,6 +1214,18 @@ div.footerList {
 }
 
 @media screen and (max-width:767px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
 
     div#container {
         display:grid;
@@ -1309,6 +1350,14 @@ div.footerList {
         margin: 5px;
     } /* définition d'une largeur de card pour que tout l'espace soit occupé et que les cards de chaque 
     catégorie soient identiques */ 
+
+    div.populaireBody h3 {
+        font-size: 15px;
+    }
+
+    div.populaireBody p {
+        font-size: 12px;
+    }
     
     /* Article 1 */
     
@@ -1335,7 +1384,14 @@ div.footerList {
         width: 345px;
         margin: 5px;
     }
-    
+
+    div.marseilleBody h3 {
+        font-size: 15px;
+    }
+
+    div.marseilleBody p {
+        font-size: 12px;
+    }
     /* Activité */
 
     article.article2 {

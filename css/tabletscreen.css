@@ -1,252 +1,285 @@
-div#container {
-        display:grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-        "nav"
-        "filter"
-        "aside"
-        "article1"
-        "article2"
-        "footer";
-        height: 100vh;
-        max-width: 768px;
-        margin: auto;
+body { 
+    font-size: 14px;
 }
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+div#container {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "nav"
+    "filter"
+    "aside"
+    "article1"
+    "article2"
+    "footer";
+    height: 100vh;
+    max-width: 768px;
+    margin: auto;
+} /* modification de la grid pour passer à une seule colonne */
 
 /* Header */
-    
+
 header.nav {
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    margin-bottom: 20px;
-}
+flex-direction: column;
+justify-content: center;
+margin: 0;
+margin-bottom: 20px;
+}  /* utilisation du header de la maquette mobile */ 
 
 header.nav nav {
-    width: 100%;
+width: 100%;
 }
 
 div.logo img {
-    margin: 25px 0 25px 0;
+margin: 25px 0 25px 0;
 }
 
 a.linkNav {
-    width: 50%;
-    padding: 10px;
-    text-align: center;
-    border-top: none;
-    border-bottom: 2px solid #f2f2f2;
+width: 50%;
+padding: 10px;
+text-align: center;
+border-top: none;
+border-bottom: 2px solid #f2f2f2;
 }
 
 a.linkNav:hover {
-    border-top:none;
-    border-bottom: 2px solid #0065fc;
+border-top:none;
+border-bottom: 2px solid #0065fc;
 }
 
 /* Search */ 
-    
+
 main.search {
-    grid-area: filter;
-    margin: 0 10px 20px 10px; 
+grid-area: filter;
+margin: 0 10px 20px 10px; 
 }
 
 div.searchIntro {
-    margin-bottom: 30px;
+margin-bottom: 30px;
 }
 
 form.searchForm {
-    margin-left: 8px;
-    justify-content: center; /* centre la barre de recherche */
+margin-left: 8px;
+justify-content: center; /* centre la barre de recherche */
+}
+
+input.searchText {
+font-size: 15px;
 }
 
 
 input.searchButton {
-    display: none; /* n'affiche pas le bouton desktop */ 
+display: none; /* n'affiche pas le bouton desktop */ 
 }
 
 button.mobileButton {
-    width: 50px;
-    display: block;
-    background-color: #0065fc;
-    border: none;
-    border-radius: 15px;
-    position: relative;
-    right: 10px; /* décalage du bouton mobile pour qu'il chevauche la barre de recherche */
+width: 50px;
+display: block;
+background-color: #0065fc;
+border: none;
+border-radius: 15px;
+position: relative;
+right: 10px; /* décalage du bouton mobile pour qu'il chevauche la barre de recherche */
 }
 
 .mobileButton i {
-    color: white;
-    font-size: 15px;
+color: white;
+font-size: 15px;
 }
 
 /* Filter */
 
+div.searchFilter h3 {
+font-size: 15px;
+}
+
 button.filterBox {
-    margin: 5px;
-    padding: 3px 15px 3px 0px;
-} /* redimmension pour que les éléments s'adapte à la maquette mobile */ 
+margin: 5px;
+padding: 3px 15px 3px 0px;
+} /* redimmension pour que les éléments s'adapte */ 
 
 span.textButton {
-    font-weight: 700;
-    font-size: 15px;
-    z-index: 1;
+font-size: 15px;
+font-weight: 700;
+z-index: 1;
 
 }
 
 /* Aside */ 
-    
+
 aside.aside {
-    margin: 0 0 20px 0;
-    border-radius: 15px;
-    padding: 5px 5px 15px 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
+background-color: white;
+margin: 0 0 20px 0;
+padding: 5px 5px 15px 5px;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+} /* disposition des cards en ligne pour profiter de la largeur d'une tablette par rapport a la maquette
+mobile */ 
 
 div.asideTitle {
-    margin: 10px 10px 15px 10px;
+margin: 10px 10px 15px 15px;
 }
 
 div.populaire {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}  
 
 
 div.populaireCard {
-    width: 240px;
-    margin: 5px;
-}
+width: 230px;
+margin: 10px;
+} /* définition d'une largeur pour que les cards soient identiques */ 
 
 div.populaireImg {
-    width: 80px;
-    padding-right: 80px;
-    height: 110px;
-}
+width: 80px;
+padding-right: 80px;
+height: 110px;
+} /* ajustement de la taille des images, le padding permet de bloquer la largeur comme que l'image est 
+en position absolute */ 
 
 div.populaireBody {
-    margin: 10px 10px 10px 5px;
-    padding-left: 0;
+margin: 10px 10px 10px 5px;
+padding-left: 0;
 }
 
 div.populaireBody h3 {
-    font-size: 15px;
+font-size: 13px;
 }
 
 div.populaireBody p {
-    font-size: 14px;
+font-size: 11px;
 }
 
 /* Article 1 */
-    
+
 article.article1 {
-    background-color: white;
-    margin: 0;
-    margin-bottom: 20px;
-    padding: 5px 5px 15px 5px;
+background-color: white;
+margin: 0;
+margin-bottom: 20px;
+padding: 5px 5px 15px 5px;
 }
 
 article.article1 h2 {
-    margin: 10px 5px 15px 5px;
-    padding-top: 5px;
-    padding-left: 5px;
+margin: 10px 5px 15px 10px;
+padding-top: 5px;
+padding-left: 5px;
+}
+
+p.more {
+padding-left: 5px;
 }
 
 
 div.marseilleCard {
-    width: 240px;
-    margin: 5px;
+width: 230px;
+margin: 10px;
 }
 
 div.marseilleBody h3 {
-    font-size: 15px;
+font-size: 13px;
 }
 
 div.marseilleBody p {
-    font-size: 14px;
+font-size: 11px;
 }
 
 /* Activités */ 
 
 article.article2 {
-    margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 article.article2 h2 {
-    margin: 15px 10px 15px 10px;
+margin: 15px 10px 15px 10px;
 }
 
 
 div.activites {
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "activite1 activite2"
-    "activite1 activite3"
-    "activite4 activite5"
-    "activite4 activite6";
-}
+grid-template-rows: 1fr 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr;
+grid-template-areas: 
+"activite1 activite2"
+"activite1 activite3"
+"activite4 activite5"
+"activite4 activite6";
+} /* Redimension de la grid pour s'adapter au format */ 
+
+/* définition des hauteurs des différentes cards */
 
 div.activiteBig {
-    height: 350px;
+height: 350px;
 }
 
 div.activiteMedium {
-    height: 175px;
+height: 175px;
 }
 
 div.activiteSmall {
-    height: 130px;
+height: 130px;
 }
 
 div.activite1, div.activite2, div.activite3, div.activite4, div.activite5, div.activite6 {
-    margin: 0 10px 0 10px; 
+margin: 0 10px 0 10px; 
 }
 
 div.activite1, div.activite3, div.activite4, div.activite5, div.activite6 {
-    margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 
 div.activite5 {
-    margin-bottom: 45px;
+margin-bottom: 45px;
+}
+
+/* ajustement proportionnel de la bande blanche sur les cards */ 
+
+div.bigTitle h3, div.mediumTitle h3, div.smallTitle h3 {
+font-size: 13px;
 }
 
 div.bigImg {
-    height: 85%;
+height: 85%;
 }
 
 div.bigTitle {
-    height: 15%;
+height: 15%;
 }
 
 div.mediumImg {
-    height: 72%;
+height: 72%;
 }
 
 div.mediumTitle {
-    height: 28%;
+height: 28%;
 }
 
 div.smallImg {
-    height: 62%;
+height: 62%;
 }
 
 div.smallImg img {
-    width: 100%;
+width: 100%;
 }
 
 div.smallTitle {
-    height: 38%;
+height: 38%;
 }
 
 /* Footer */ 
 
 div.footerList {
-    width: 85%;
-    margin: 20px 20px 20px 10px;
+width: 85%;
+margin: 20px 20px 20px 10px;
 }
-

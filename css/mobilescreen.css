@@ -1,9 +1,19 @@
+body {
+    font-size: 14px;
+}
 
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 15px;
+}
 
 div#container {
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 2fr 4fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
     "nav"
     "filter"
@@ -12,25 +22,28 @@ div#container {
     "article2"
     "footer";
     height: 100vh;
-    width: 100%;
     max-width: 375px;
     margin: auto;
-}
+} /* grid sur une seule colonne */ 
 
 /* Header */
 
 header.nav {
     flex-direction: column;
     justify-content: center;
-    margin: 0;
+    margin: 0 0 20px 0;
 }
 
 header.nav nav {
     width: 100%;
+} /* permet à la bordure des liens d'occuper toute la largeur */
+
+div.logo img {
+    margin: 25px 0 25px 0;
 }
 
 a.linkNav {
-    width: 50%;
+    width: 50%; /* permet au soulignement bleu au hover d'être bien réparti */ 
     padding: 10px;
     text-align: center;
     border-top: none;
@@ -46,7 +59,7 @@ a.linkNav:hover {
 
 main.search {
     grid-area: filter;
-    margin: 20px;
+    margin: 0 10px 20px 10px; 
 }
 
 div.searchIntro {
@@ -54,7 +67,7 @@ div.searchIntro {
 }
 
 form.searchForm {
-
+    margin-left: 8px;
     justify-content: center; /* centre la barre de recherche */
 }
 
@@ -95,14 +108,18 @@ span.textButton {
 /* Aside */ 
 
 aside.aside {
-    margin: 0;
+    margin: 0 0 20px 0;
     border-radius: 0;
-    padding: 10px 10px 30px 10px;
+    padding: 10px 5px 25px 5px;
+    background-size: 100%;
 }
 
 div.asideTitle {
-    margin: 20px 5px 10px 5px;   
+    align-items: center;
+    margin: 20px 10px 10px 10px;   
 }
+
+
 
 div.populaire {
     display: flex;
@@ -112,21 +129,30 @@ div.populaire {
 
 
 div.populaireCard {
-    width: 345px;
+    width: 345px; 
     margin: 5px;
+} /* définition d'une largeur de card pour que tout l'espace soit occupé et que les cards de chaque 
+catégorie soient identiques */ 
+
+div.populaireBody h3 {
+    font-size: 15px;
+}
+
+div.populaireBody p {
+    font-size: 12px;
 }
 
 /* Article 1 */
 
 article.article1 {
     background-color: white;
-    margin: 0;
+    margin: 0 0 20px 0;
     border-radius: 0;
-    padding: 10px;
+    padding: 10px 5px 0 5px;
 }
 
 article.article1 h2 {
-    margin: 20px 5px 10px 5px;
+    margin: 10px 5px 10px 5px;
     padding-top: 5px;
     padding-left: 5px;
 }
@@ -134,6 +160,7 @@ article.article1 h2 {
 div.marseille {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 div.marseilleCard {
@@ -141,13 +168,29 @@ div.marseilleCard {
     margin: 5px;
 }
 
+div.marseilleBody h3 {
+    font-size: 15px;
+}
+
+div.marseilleBody p {
+    font-size: 12px;
+}
 /* Activité */
+
+article.article2 {
+    margin: 0 0 20px 0;
+    padding: 10px 5px 0 5px;
+}
+
+article.article2 h2 {
+    margin: 0 10px 10px 10px;
+}
 
 div.activites {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} /* passage en flex pour que les card s'ajustent en colonnes */ 
 
 div.activite1, div.activite2, div.activite3, div.activite4, div.activite5, div.activite6 {
     width: 345px;
@@ -176,6 +219,7 @@ div.bigImg img, div.mediumImg img, div.smallImg img {
 
 div.footerList {
     flex-direction: column;
+    margin: 20px 10px 20px 15px;
 }
 
 div.divList {
