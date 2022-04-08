@@ -118,6 +118,10 @@ input.searchText {
     border-style: solid;
     border-color: #F2F2F2;
     padding-left: 20px;
+    /* reset pour les navigateurs mobile */
+    background-color: white;
+    appearance: none;
+    border-radius: 0;
 }
 
 input.searchButton {
@@ -128,6 +132,8 @@ input.searchButton {
     color: white;
     font-size: 17px;
     font-weight: 700;
+    /* reset pour les navigateurs mobile */
+    appearance: none;
 }
 
 button.mobileButton {
