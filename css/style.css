@@ -1,14 +1,16 @@
+/* Import Fonts Google API */
+
+
 * {
-    box-sizing: border-box;
     font-family: 'Raleway';
+    box-sizing: border-box;
     color: black;
 }
 
-:root {
 
-}
 
 html {
+/* Rajouter des fonts de secours */
 
 }
 
@@ -44,8 +46,8 @@ div#container {
     "article1 aside"
     "article2 article2"
     "footer footer";
-    height: 100vh;
     max-width: 1440px;
+    height: 100vh;
     margin: auto;
 } /* exemple de Grid, fr= fraction */
  
@@ -279,13 +281,12 @@ p.more a {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin-bottom: 5px;
-    align-self: center;
 }
 
 
 
 div.marseilleCard {
-    width: 250px;
+    width: 88%;
     background-color: white;
     border-radius: 20px;
     margin: 15px;
@@ -320,7 +321,7 @@ div.marseilleImg .imgPosition1 {
 
 div.marseilleImg .imgPosition2 {
     position: absolute;
-    top: -50%;
+    top: -70%;
     width: 100%;
 }
 
@@ -343,13 +344,12 @@ div.marseilleBody {
 }
 
 div.marseilleBody h3 {
-    white-space: nowrap;
-    font-size: 17px;
+    font-size: 16px;
     margin-bottom: 5px;
 }
 
 div.marseilleBody p {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 300;
     margin-bottom: 5px;
 }
@@ -398,9 +398,9 @@ i.iconChart {
 /* Cartes populaires */
 
 div.populaire {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 div.populaireCard {
@@ -428,9 +428,10 @@ div.populaireImg {
     border-radius: 15px 0 0 15px;
     margin: 5px;
     overflow: hidden;
-    padding-right: 125px;
+    min-height: 135px;
+    max-height: 150px;
     width: 125px;
-    height: 135px; /* taille du conteneur de l'image */ 
+    padding-right: 125px; /* taille du conteneur de l'image */ 
 }
 
 /* ajustement des images */ 
@@ -438,7 +439,8 @@ div.populaireImg {
 div.populaireImg .imgPosition5 {
     position: absolute;
     object-fit: cover;
-    height: 110%;
+    height: 150%;
+    bottom: -28%;
 }
 
 
@@ -460,14 +462,13 @@ div.populaireBody {
 }
 
 div.bodyText h3 {
-    white-space: nowrap;
-    font-size: 17px;
+    font-size: 16px;
     padding-top: 5px;
     margin-bottom: 10px;
 }
 
 div.bodyText p {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 300;
     margin-bottom: 5px;
 }
@@ -490,7 +491,7 @@ article.article2 h2 {
 div.activites {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 225px 225px;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
     "activite1 activite2 activite4 activite5"
     "activite1 activite3 activite4 activite6";
@@ -632,7 +633,6 @@ div.smallImg {
 div.smallImg img {
     object-fit: cover;
     position: absolute;
-    height: 170%;
 }
 
 div.smallTitle {
@@ -672,12 +672,12 @@ li.listLink a {
     text-decoration: none;
 }
 
-/* Media queries */ 
+/* ma queries */ 
 
-@media screen and (max-width:1200px) and (min-width:992px) {
+@media screen and (max-width:1279px) {
 
     div#container  {
-        max-width: 992px;
+        width: 97%;
         margin: auto;
     }
     
@@ -790,14 +790,14 @@ li.listLink a {
     }
     
     p.more {
-        padding-top: 5px;
+        padding: 5px 0 10px 5px;
         font-size: 16px;
     }
     
     /* Marseille card */
     
     div.marseilleCard {
-        width: 180px;
+        width: 90%;
         margin: 12px;
     }
     
@@ -852,13 +852,13 @@ li.listLink a {
     
     
     div.populaireCard {
-        margin: 15px 10px 15px 10px;
+        margin: 12px 10px 12px 10px;
     }
     
     div.populaireImg {
         width: 90px;
-        height: 100px;
-        padding-right: 100px;
+        min-height: 110px;
+        padding-right: 90px;
     }
     
     div.populaireBody {
@@ -886,7 +886,7 @@ li.listLink a {
     }
     
     article.article2 h2 {
-        margin: 20px;
+        margin: 15px;
     }
     
     div.activite1, div.activite2, div.activite3, div.activite4, div.activite5, div.activite6 {
@@ -906,7 +906,7 @@ li.listLink a {
     }
     
     div.activites {
-        grid-template-rows: 175px 175px;
+        grid-template-rows: 1fr 1fr;
     }  /* ajustement de la hauteur de ligne pour gérer l'alignement des petites et moyennes cartes */
     
     div.activiteBig {
@@ -946,7 +946,7 @@ li.listLink a {
     div#container {
         display:grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
         "nav"
         "filter"
@@ -955,272 +955,253 @@ li.listLink a {
         "article2"
         "footer";
         height: 100vh;
-        max-width: 768px;
+        width: 97%;
         margin: auto;
-} /* modification de la grid pour passer à une seule colonne */
+    } /* modification de la grid pour passer à une seule colonne */
 
-/* Header */
-    
-header.nav {
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    margin-bottom: 20px;
-}  /* utilisation du header de la maquette mobile */ 
+    /* Header */
+        
+    header.nav {
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        margin-bottom: 20px;
+    }  /* utilisation du header de la maquette mobile */ 
 
-header.nav nav {
-    width: 100%;
-}
+    header.nav nav {
+        width: 100%;
+    }
 
-div.logo img {
-    margin: 25px 0 25px 0;
-}
+    div.logo img {
+        margin: 25px 0 25px 0;
+    }
 
-a.linkNav {
-    width: 50%;
-    padding: 10px;
-    text-align: center;
-    border-top: none;
-    border-bottom: 2px solid #f2f2f2;
-}
+    a.linkNav {
+        width: 50%;
+        padding: 10px;
+        text-align: center;
+        border-top: none;
+        border-bottom: 2px solid #f2f2f2;
+    }
 
-a.linkNav:hover {
-    border-top:none;
-    border-bottom: 2px solid #0065fc;
-}
+    a.linkNav:hover {
+        border-top:none;
+        border-bottom: 2px solid #0065fc;
+    }
 
-/* Search */ 
-    
-main.search {
-    grid-area: filter;
-    margin: 0 10px 20px 10px; 
-}
+    /* Search */ 
+        
+    main.search {
+        grid-area: filter;
+        margin: 0 10px 20px 10px; 
+    }
 
-div.searchIntro {
-    margin-bottom: 30px;
-}
+    div.searchIntro {
+        margin-bottom: 30px;
+    }
 
-form.searchForm {
-    margin-left: 8px;
-    justify-content: center; /* centre la barre de recherche */
-}
+    form.searchForm {
+        margin-left: 8px;
+        justify-content: center; /* centre la barre de recherche */
+    }
 
-input.searchText {
-    font-size: 15px;
-}
-
-
-input.searchButton {
-    display: none; /* n'affiche pas le bouton desktop */ 
-}
-
-button.mobileButton {
-    width: 50px;
-    display: block;
-    background-color: #0065fc;
-    border: none;
-    border-radius: 15px;
-    position: relative;
-    right: 10px; /* décalage du bouton mobile pour qu'il chevauche la barre de recherche */
-}
-
-.mobileButton i {
-    color: white;
-    font-size: 15px;
-}
-
-/* Filter */
-
-div.searchFilter h3 {
-    font-size: 15px;
-}
-
-button.filterBox {
-    margin: 5px;
-    padding: 3px 15px 3px 0px;
-} /* redimmension pour que les éléments s'adapte */ 
-
-span.textButton {
-    font-size: 15px;
-    font-weight: 700;
-    z-index: 1;
-
-}
-
-/* Aside */ 
-    
-aside.aside {
-    background-color: white;
-    margin: 0 0 20px 0;
-    padding: 5px 5px 15px 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-} /* disposition des cards en ligne pour profiter de la largeur d'une tablette par rapport a la maquette
-mobile */ 
-
-div.asideTitle {
-    margin: 10px 10px 15px 15px;
-}
-
-div.populaire {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}  
+    input.searchText {
+        font-size: 15px;
+    }
 
 
-div.populaireCard {
-    width: 230px;
-    margin: 10px;
-} /* définition d'une largeur pour que les cards soient identiques */ 
+    input.searchButton {
+        display: none; /* n'affiche pas le bouton desktop */ 
+    }
 
-div.populaireImg {
-    width: 80px;
-    padding-right: 80px;
-    height: 110px;
-} /* ajustement de la taille des images, le padding permet de bloquer la largeur comme que l'image est 
-en position absolute */ 
+    button.mobileButton {
+        width: 50px;
+        display: block;
+        background-color: #0065fc;
+        border: none;
+        border-radius: 15px;
+        position: relative;
+        right: 10px; /* décalage du bouton mobile pour qu'il chevauche la barre de recherche */
+    }
 
-div.populaireBody {
-    margin: 10px 10px 10px 5px;
-    padding-left: 0;
-}
+    .mobileButton i {
+        color: white;
+        font-size: 15px;
+    }
 
-div.populaireBody h3 {
-    font-size: 13px;
-}
+    /* Filter */
 
-div.populaireBody p {
-    font-size: 11px;
-}
+    div.searchFilter h3 {
+        font-size: 15px;
+    }
 
-/* Article 1 */
-    
-article.article1 {
-    background-color: white;
-    margin: 0;
-    margin-bottom: 20px;
-    padding: 5px 5px 15px 5px;
-}
+    button.filterBox {
+        margin: 5px;
+        padding: 3px 15px 3px 0px;
+    } /* redimmension pour que les éléments s'adapte */ 
 
-article.article1 h2 {
-    margin: 10px 5px 15px 10px;
-    padding-top: 5px;
-    padding-left: 5px;
-}
+    span.textButton {
+        font-size: 15px;
+        font-weight: 700;
+        z-index: 1;
 
-p.more {
-    padding-left: 5px;
-}
+    }
 
+    /* Aside */ 
+        
+    aside.aside {
+        background-color: #F2F2F2;
+        margin: 0 10px 20px 10px;
+        padding: 5px 5px 15px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    } /* disposition des cards en ligne pour profiter de la largeur d'une tablette par rapport a la maquette
+    mobile */ 
 
-div.marseilleCard {
-    width: 230px;
-    margin: 10px;
-}
+    div.asideTitle {
+        margin: 10px 10px 15px 15px;
+    }
 
-div.marseilleBody h3 {
-    font-size: 13px;
-}
-
-div.marseilleBody p {
-    font-size: 11px;
-}
-
-/* Activités */ 
-
-article.article2 {
-    margin-bottom: 20px;
-}
-
-article.article2 h2 {
-    margin: 15px 10px 15px 10px;
-}
+    div.populaire {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }  
 
 
-div.activites {
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "activite1 activite2"
-    "activite1 activite3"
-    "activite4 activite5"
-    "activite4 activite6";
-} /* Redimension de la grid pour s'adapter au format */ 
+    div.populaireCard {
+        width: 31%;
+        margin: 7px;
+    } /* définition d'une largeur pour que les cards soient identiques */ 
 
-/* définition des hauteurs des différentes cards */
+    div.populaireImg {
+        width: 80px;
+        padding-right: 80px;
+        height: 110px;
+    } /* ajustement de la taille des images, le padding permet de bloquer la largeur comme que l'image est 
+    en position absolute */ 
 
-div.activiteBig {
-    height: 350px;
-}
+    div.populaireBody {
+        margin: 10px 10px 10px 5px;
+        padding-left: 0;
+    }
 
-div.activiteMedium {
-    height: 175px;
-}
+    div.populaireBody h3 {
+        font-size: 13px;
+    }
 
-div.activiteSmall {
-    height: 130px;
-}
+    div.populaireBody p {
+        font-size: 11px;
+    }
 
-div.activite1, div.activite2, div.activite3, div.activite4, div.activite5, div.activite6 {
-    margin: 0 10px 0 10px; 
-}
+    /* Article 1 */
+        
+    article.article1 {
+        background-color: white;
+        margin: 0 10px 20px 10px;
+        padding: 5px 5px 15px 5px;
+    }
 
-div.activite1, div.activite3, div.activite4, div.activite5, div.activite6 {
-    margin-bottom: 20px;
-}
+    article.article1 h2 {
+        margin: 10px 5px 15px 10px;
+        padding-top: 5px;
+        padding-left: 5px;
+    }
+
+    p.more {
+        padding-left: 5px;
+    }
 
 
-div.activite5 {
-    margin-bottom: 45px;
-}
+    div.marseilleCard {
+        width: 93%;
+        margin: 7px;
+    }
 
-/* ajustement proportionnel de la bande blanche sur les cards */ 
+    div.marseilleBody h3 {
+        font-size: 13px;
+    }
 
-div.bigTitle h3, div.mediumTitle h3, div.smallTitle h3 {
-    font-size: 13px;
-}
+    div.marseilleBody p {
+        font-size: 11px;
+    }
 
-div.bigImg {
-    height: 85%;
-}
+    /* Activités */ 
 
-div.bigTitle {
-    height: 15%;
-}
+    article.article2 {
+        margin-bottom: 20px;
+    }
 
-div.mediumImg {
-    height: 72%;
-}
+    article.article2 h2 {
+        margin: 15px 10px 15px 10px;
+    }
 
-div.mediumTitle {
-    height: 28%;
-}
 
-div.smallImg {
-    height: 62%;
-}
+    div.activites {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "activite1 activite2 activite3"
+        "activite4 activite5 activite6";
+    } /* Redimension de la grid pour s'adapter au format */ 
 
-div.smallImg img {
-    width: 100%;
-}
+    /* définition des hauteurs des différentes cards */
 
-div.smallTitle {
-    height: 38%;
-}
+    div.activite1,  div.activite2, div.activite3, div.activite4, div.activite5, div.activite6 {
+        height: 200px;
+        margin: 0 10px 20px 10px;
+    }
 
-/* Footer */ 
+    /* ajustement proportionnel de la bande blanche sur les cards */ 
 
-div.footerList {
-    width: 85%;
-    margin: 20px 20px 20px 10px;
-}
-    
+    div.bigTitle h3, div.mediumTitle h3, div.smallTitle h3 {
+        font-size: 13px;
+    }
+
+    div.bigImg {
+        height: 80%;
+    }
+
+    div.bigImg img {
+        width: 100%;
+    }
+
+    div.bigTitle {
+        height: 20%;
+    }
+
+    div.mediumImg {
+        height: 80%;
+    }
+
+    div.mediumTitle {
+        height: 20%;
+    }
+
+    div.smallImg {
+        height: 80%;
+    }
+
+    div.smallImg img {
+        width: 100%;
+        height: 190%;
+    }
+
+    div.smallTitle {
+        height: 20%;
+    }
+
+    /* Footer */ 
+
+    div.footerList {
+        width: 85%;
+        margin: 20px 20px 20px 20px;
+    }
+
 }
 
 @media screen and (max-width:767px) {
-
     body {
         font-size: 14px;
     }
@@ -1244,8 +1225,9 @@ div.footerList {
         "article1"
         "article2"
         "footer";
+        max-width: 450px;
+        width: 100%;
         height: 100vh;
-        max-width: 375px;
         margin: auto;
     } /* grid sur une seule colonne */ 
     
@@ -1286,7 +1268,7 @@ div.footerList {
     }
     
     div.searchIntro {
-        margin-bottom: 30px;
+        margin: 0 0 30px 10px;
     }
     
     form.searchForm {
@@ -1294,6 +1276,13 @@ div.footerList {
         justify-content: center; /* centre la barre de recherche */
     }
     
+    div.searchFilter {
+        margin-left: 10px;
+    }
+
+    div.searchInfo {
+        margin-left: 10px;
+    }
     
     input.searchButton {
         display: none; /* n'affiche pas le bouton desktop */ 
@@ -1339,7 +1328,7 @@ div.footerList {
     
     div.asideTitle {
         align-items: center;
-        margin: 20px 10px 10px 10px;   
+        margin: 20px 10px 10px 20px;   
     }
 
     
@@ -1352,7 +1341,7 @@ div.footerList {
     
     
     div.populaireCard {
-        width: 345px; 
+        width: 93%; 
         margin: 5px;
     } /* définition d'une largeur de card pour que tout l'espace soit occupé et que les cards de chaque 
     catégorie soient identiques */ 
@@ -1375,9 +1364,13 @@ div.footerList {
     }
     
     article.article1 h2 {
-        margin: 10px 5px 10px 5px;
+        margin: 10px 5px 10px 20px;
         padding-top: 5px;
         padding-left: 5px;
+    }
+
+    p.more {
+        margin-left: 20px;
     }
     
     div.marseille {
@@ -1387,8 +1380,20 @@ div.footerList {
     }
     
     div.marseilleCard {
-        width: 345px;
+        width: 93%;
         margin: 5px;
+    }
+
+    div.marseilleImg .imgPosition1 {
+        top: -100%;
+    }
+
+    div.marseilleImg .imgPosition2 {
+        top: -195%;
+    }
+
+    div.marseilleImg .imgPosition4 {
+        top: -260%;
     }
 
     div.marseilleBody h3 {
@@ -1406,7 +1411,7 @@ div.footerList {
     }
 
     article.article2 h2 {
-        margin: 0 10px 10px 10px;
+        margin: 0 10px 10px 20px;
     }
     
     div.activites {
@@ -1416,7 +1421,7 @@ div.footerList {
     } /* passage en flex pour que les card s'ajustent en colonnes */ 
     
     div.activite1, div.activite2, div.activite3, div.activite4, div.activite5, div.activite6 {
-        width: 345px;
+        width: 93%;
         margin: 5px;
     }
     
@@ -1442,11 +1447,10 @@ div.footerList {
     
     div.footerList {
         flex-direction: column;
-        margin: 20px 10px 20px 15px;
+        margin: 20px 10px 20px 35px;
     }
     
     div.divList {
         padding-bottom: 20px;
     }
-    
 }
