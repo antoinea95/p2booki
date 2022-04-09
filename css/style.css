@@ -677,7 +677,6 @@ li.listLink a {
 @media screen and (max-width:1279px) {
 
     div#container  {
-        width: 97%;
         margin: auto;
     }
     
@@ -702,7 +701,7 @@ li.listLink a {
     /* Header */ 
 
     header.nav {
-        margin: 0 15px 30px 15px;
+        margin: 0 30px 30px 30px;
     }
     
     div.logo img {
@@ -739,7 +738,7 @@ li.listLink a {
     /* Filter */ 
 
     main.search {
-        margin: 0 15px 30px 15px;
+        margin: 0 30px 30px 30px;
     }
     
     div.searchFilter h3 {
@@ -780,7 +779,7 @@ li.listLink a {
 
     article.article1 {
         padding: 15px;
-        margin: 0 10px 30px 15px;
+        margin: 0 10px 30px 30px;
     }
     
 
@@ -836,7 +835,7 @@ li.listLink a {
     
     aside.aside {
         padding: 15px;
-        margin: 0 15px 30px 10px;
+        margin: 0 30px 30px 10px;
     }
     
     div.asideTitle {
@@ -882,7 +881,7 @@ li.listLink a {
     /* Activités */
 
     article.article2 {
-        margin-bottom: 30px;
+        margin: 0 20px 30px 20px;
     }
     
     article.article2 h2 {
@@ -924,7 +923,7 @@ li.listLink a {
     /* footer */ 
     
     div.footerList {
-        margin: 20px 20px 30px 20px;
+        margin: 20px 20px 30px 30px;
     }
     
 }
@@ -955,7 +954,6 @@ li.listLink a {
         "article2"
         "footer";
         height: 100vh;
-        width: 97%;
         margin: auto;
     } /* modification de la grid pour passer à une seule colonne */
 
@@ -993,7 +991,7 @@ li.listLink a {
         
     main.search {
         grid-area: filter;
-        margin: 0 10px 20px 10px; 
+        margin: 0 15px 20px 15px; 
     }
 
     div.searchIntro {
@@ -1051,8 +1049,8 @@ li.listLink a {
         
     aside.aside {
         background-color: #F2F2F2;
-        margin: 0 10px 20px 10px;
-        padding: 5px 5px 15px 5px;
+        margin: 0 15px 20px 15px;
+        padding: 5px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -1071,8 +1069,8 @@ li.listLink a {
 
 
     div.populaireCard {
-        width: 31%;
-        margin: 7px;
+        width: 32%;
+        margin: 6px;
     } /* définition d'une largeur pour que les cards soient identiques */ 
 
     div.populaireImg {
@@ -1099,7 +1097,7 @@ li.listLink a {
         
     article.article1 {
         background-color: white;
-        margin: 0 10px 20px 10px;
+        margin: 0 15px 20px 15px;
         padding: 5px 5px 15px 5px;
     }
 
@@ -1115,8 +1113,8 @@ li.listLink a {
 
 
     div.marseilleCard {
-        width: 93%;
-        margin: 7px;
+        width: 95.88%;
+        margin: 5px;
     }
 
     div.marseilleBody h3 {
@@ -1130,11 +1128,11 @@ li.listLink a {
     /* Activités */ 
 
     article.article2 {
-        margin-bottom: 20px;
+        margin: 0 10px 20px 10px;
     }
 
     article.article2 h2 {
-        margin: 15px 10px 15px 10px;
+        margin: 15px 10px 20px 15px;
     }
 
 
@@ -1196,7 +1194,7 @@ li.listLink a {
 
     div.footerList {
         width: 85%;
-        margin: 20px 20px 20px 20px;
+        margin: 20px 20px 20px 30px;
     }
 
 }
