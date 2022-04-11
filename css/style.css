@@ -2,16 +2,9 @@
 
 
 * {
-    font-family: 'Raleway';
+    font-family: 'Raleway', Helvetica, sans-serif;
     box-sizing: border-box;
     color: black;
-}
-
-
-
-html {
-/* Rajouter des fonts de secours */
-
 }
 
 body {
