@@ -1,5 +1,8 @@
 /* Import Fonts Google API */
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* global */
 
 * {
     font-family: 'Raleway', Helvetica, sans-serif;
@@ -42,7 +45,7 @@ div#container {
     max-width: 1440px;
     height: 100vh;
     margin: auto;
-} /* exemple de Grid, fr= fraction */
+} 
  
 /* Header */
 
@@ -244,8 +247,6 @@ article.article1 {
     padding: 20px;
     grid-area: article1;
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
     margin: 0 20px 40px 50px;
 }
 
@@ -277,8 +278,6 @@ p.more a {
     grid-template-rows: 1fr 1fr;
     margin-bottom: 5px;
 }
-
-
 
 div.marseilleCard {
     width: 88%;
@@ -384,7 +383,6 @@ div.asideTitle {
     
 } 
 
-
 i.iconChart {
     font-size: 21px;
     font-weight: 900;
@@ -438,7 +436,6 @@ div.populaireImg .imgPosition5 {
     bottom: -28%;
 }
 
-
 div.populaireImg .imgPosition6 {
     object-fit: cover;
     position: absolute;
@@ -468,7 +465,7 @@ div.bodyText p {
     margin-bottom: 5px;
 }
 
-
+/* Activités */
 
 article.article2 {
     grid-area: article2;
@@ -523,118 +520,90 @@ div.activite6 {
     margin: 0 50px 0 20px;
 }
 
-/* Grandes activités */
+/* Style global */ 
 
-div.activiteBig {
-    height: 450px;
+div.activiteGlobal {
     border-radius: 20px;
     box-shadow: 0 0 15px #e0e0e0;
     transition: transform 0.3s;
 }
 
-div.activiteBig:hover{
+div.activiteGlobal:hover {
     transform: scale(1.05);
     box-shadow: 3px 4px 20px gray;
 }
 
-div.activiteBig a {
+div.activiteGlobal a {
     text-decoration: none;
 }
 
-div.bigImg {
+div.activiteImg {
     border-radius: 20px 20px 0 0;
     position: relative;
     overflow: hidden;
+}
+
+div.activiteImg img {
+    object-fit: cover;
+    position: absolute;
+}
+
+div.activiteTitle {
+    border-radius: 0 0 20px 20px;
+    background-color: white;
+    padding: 15px 10px 10px 20px;
+}
+
+/* Grandes activités */
+
+div.activiteBig {
+    height: 450px;
+}
+
+div.bigImg {
     height: 89%;
 }
 
 div.bigImg img {
-    object-fit: cover;
-    position: absolute;
     height: 100%;
 }
 
 div.bigTitle {
     height: 11%;
-    border-radius: 0 0 20px 20px;
-    background-color: white;
-    padding: 15px 10px 10px 20px;
 }
 
 /* Moyennes activités */ 
 
 div.activiteMedium {
     height: 225px;
-    border-radius: 20px;
-    box-shadow: 0 0 15px #e0e0e0;
-    transition: transform 0.3s;
-}
-
-div.activiteMedium:hover{
-    transform: scale(1.05);
-    box-shadow: 3px 4px 20px gray;
-}
-
-div.activiteMedium a {
-    text-decoration: none;
 }
 
 div.mediumImg {
-    border-radius: 20px 20px 0 0;
-    position: relative;
-    overflow: hidden;
     height: 78%;
 }
 
 div.mediumImg img {
-    object-fit: cover;
-    position: absolute;
     width: 200%;
     height: 100%;
 }
 
 div.mediumTitle {
     height: 22%;
-    border-radius: 0 0 20px 20px;
-    background-color: white;
-    padding: 15px 10px 10px 20px;
 }
 
 /* Petites activités */ 
 
 div.activiteSmall {
     height: 180px;
-    border-radius: 20px;
-    box-shadow: 0 0 15px #e0e0e0;
-    transition: transform 0.3s;
-}
-
-div.activiteSmall:hover{
-    transform: scale(1.05);
-    box-shadow: 3px 4px 20px gray;
-}
-
-div.activiteSmall a {
-    text-decoration: none;
 }
 
 div.smallImg {
-    border-radius: 20px 20px 0 0;
-    position: relative;
-    overflow: hidden;
     height: 70%;
 }
 
-div.smallImg img {
-    object-fit: cover;
-    position: absolute;
-}
 
 div.smallTitle {
     height: 30%;
-    background-color: white;
-    border-radius: 0 0 20px 20px;
-    padding: 15px 10px 10px 20px;
 }
 
 /* footer */ 
@@ -654,7 +623,6 @@ div.footerList h3 {
     padding: 20px 0 20px 0;
 }
 
-
 div.footerList ul {
     list-style-type: none;
 }
@@ -667,7 +635,7 @@ li.listLink a {
     text-decoration: none;
 }
 
-/* ma queries */ 
+/* media queries */ 
 
 @media screen and (max-width:1279px) {
 
@@ -675,7 +643,6 @@ li.listLink a {
         margin: auto;
     }
     
-    /* reduction de la taille des polices */ 
     body {
         font-size: 14px;
     }
@@ -754,7 +721,6 @@ li.listLink a {
         height: 45px;
         font-size: 16px;
     }
-
     
     span.jaugeBox {
         width: 45px;
@@ -776,7 +742,6 @@ li.listLink a {
         padding: 15px;
         margin: 0 10px 30px 30px;
     }
-    
 
     article.article1 h2 {
         margin: 10px;
@@ -883,7 +848,7 @@ li.listLink a {
         margin: 15px 15px 22px 15px;
     }
     
-    div.activite1, div.activite2, div.activite3, div.activite4, div.activite5, div.activite6 {
+    div.activiteGlobal {
         margin: 0 15px 0 15px; 
     }
     
@@ -891,17 +856,13 @@ li.listLink a {
         margin-bottom: 45px;
     }
     
-    div.bigTitle, div.mediumTitle, div.smallTitle {
+    div.activiteTitle {
         padding: 12px 5px 12px 15px;
     }
     
-    div.bigTitle h3, div.mediumTitle h3, div.smallTitle h3 {
+    div.activiteTitle h3 {
         font-size: 13px;
     }
-    
-    div.activites {
-        grid-template-rows: 1fr 1fr;
-    }  /* ajustement de la hauteur de ligne pour gérer l'alignement des petites et moyennes cartes */
     
     div.activiteBig {
         height: 350px;
@@ -922,6 +883,8 @@ li.listLink a {
     }
     
 }
+
+/* Tablet screen */
 
 @media screen and (max-width:991px) and (min-width:768px) {
 
@@ -950,7 +913,9 @@ li.listLink a {
         "footer";
         height: 100vh;
         margin: auto;
-    } /* modification de la grid pour passer à une seule colonne */
+    } 
+    /* modification de la grid pour passer à une seule colonne et que le
+    aside soit en 1ère position */
 
     /* Header */
         
@@ -1035,9 +1000,6 @@ li.listLink a {
 
     span.textButton {
         font-size: 15px;
-        font-weight: 700;
-        z-index: 1;
-
     }
 
     /* Aside */ 
@@ -1046,11 +1008,7 @@ li.listLink a {
         background-color: #F2F2F2;
         margin: 0 15px 20px 15px;
         padding: 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    } /* disposition des cards en ligne pour profiter de la largeur d'une tablette par rapport a la maquette
-    mobile */ 
+    }
 
     div.asideTitle {
         margin: 10px 10px 15px 10px;
@@ -1062,18 +1020,16 @@ li.listLink a {
         justify-content: center;
     }  
 
-
     div.populaireCard {
         width: 32%;
         margin: 6px;
-    } /* définition d'une largeur pour que les cards soient identiques */ 
+    } 
 
     div.populaireImg {
         width: 80px;
         padding-right: 80px;
         height: 110px;
-    } /* ajustement de la taille des images, le padding permet de bloquer la largeur comme que l'image est 
-    en position absolute */ 
+    }
 
     div.populaireBody {
         margin: 10px 10px 10px 5px;
@@ -1106,7 +1062,6 @@ li.listLink a {
         padding-left: 1px;
     }
 
-
     div.marseilleCard {
         width: 95.05%;
         margin: 6px;
@@ -1130,7 +1085,6 @@ li.listLink a {
         margin: 15px 10px 20px 5px;
     }
 
-
     div.activites {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
@@ -1139,16 +1093,14 @@ li.listLink a {
         "activite4 activite5 activite6";
     } /* Redimension de la grid pour s'adapter au format */ 
 
-    /* définition des hauteurs des différentes cards */
-
-    div.activite1,  div.activite2, div.activite3, div.activite4, div.activite5, div.activite6 {
+     div.activiteGlobal {
         height: 200px;
         margin: 0 10px 20px 10px;
     }
 
     /* ajustement proportionnel de la bande blanche sur les cards */ 
 
-    div.bigTitle h3, div.mediumTitle h3, div.smallTitle h3 {
+    div.activiteTitle h3 {
         font-size: 13px;
     }
 
@@ -1193,6 +1145,8 @@ li.listLink a {
     }
 
 }
+
+/* Mobile screen */ 
 
 @media screen and (max-width:767px) {
     body {
@@ -1303,35 +1257,22 @@ li.listLink a {
         padding: 3px 15px 3px 0px;
     } /* redimmension pour que les éléments s'adapte à la maquette mobile */ 
     
-    span.textButton {
-        font-weight: 700;
-        font-size: 15px;
-        z-index: 1;
-    
-    }
-    
     /* Aside */ 
     
     aside.aside {
         margin: 0 0 20px 0;
         border-radius: 0;
         padding: 10px 5px 25px 5px;
-        background-size: 100%;
     }
     
     div.asideTitle {
-        align-items: center;
         margin: 20px 15px 10px 15px;   
     }
 
-    
-    
     div.populaire {
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
     
     div.populaireCard {
         width: 93%; 
@@ -1413,27 +1354,24 @@ li.listLink a {
         align-items: center;
     } /* passage en flex pour que les card s'ajustent en colonnes */ 
     
-    div.activite1, div.activite2, div.activite3, div.activite4, div.activite5, div.activite6 {
+    div.activiteGlobal {
         width: 93%;
         margin: 5px;
-    }
-    
-    div.activiteBig, div.activiteSmall, div.activiteMedium {
         height: 200px;
     }
     
-    div.bigImg, div.mediumImg, div.smallImg {
+    div.activiteImg {
         width: 100%;
         height: 70%;
     }
-    
-    div.bigTitle, div.mediumTitle, div.smallTitle {
-        height: 30%;
-        padding: 20px 10px 20px 20px;
+
+    div.activiteImg img {
+        width: 100%;
     }
     
-    div.bigImg img, div.mediumImg img, div.smallImg img {
-        width: 100%;
+    div.activiteTitle {
+        height: 30%;
+        padding: 20px 10px 20px 20px;
     }
     
     /* Footer */ 
