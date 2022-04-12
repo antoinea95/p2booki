@@ -35,7 +35,7 @@ h3 {
 div#container {
     display:grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 2fr 4fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
     "nav nav"
     "filter filter"
@@ -388,7 +388,7 @@ i.iconChart {
     font-weight: 900;
 }
 
-/* Cartes populaires */
+/* Cartes populaires */ 
 
 div.populaire {
     display: flex;
