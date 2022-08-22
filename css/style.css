@@ -546,9 +546,14 @@ div.activiteImg {
 div.activiteImg img {
     object-fit: cover;
     position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 div.activiteTitle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     border-radius: 0 0 20px 20px;
     background-color: white;
     padding: 15px 10px 10px 20px;
